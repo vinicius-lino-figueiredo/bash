@@ -1,0 +1,14 @@
+# ~/.bash/local.sh — config local por máquina (não versionado)
+
+# Ferramentas extras nesta máquina:
+#   mise use --global node@latest
+#   mise use --global python@latest
+
+# PATH extras
+# export PATH="$HOME/.cargo/bin:$PATH"
+
+# Aliases extras
+# alias dc='docker compose'
+
+# Configs específicas (AWS, k8s, Oracle, etc.)
+# export KUBECONFIG="$HOME/.kube/config"

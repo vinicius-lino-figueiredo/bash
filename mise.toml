@@ -1,0 +1,5 @@
+[tools]
+go = "latest"
+neovim = "latest"
+fzf = "latest"
+tmux = "latest"
