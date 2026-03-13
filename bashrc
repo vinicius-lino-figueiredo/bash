@@ -23,6 +23,8 @@ export LESS=-R
 export HISTSIZE=50000
 export HISTFILESIZE=50000
 export HISTCONTROL=ignoreboth:erasedups
+export HISTFILE=~/.bash_history
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND; }history -a; history -n"
 shopt -s histappend
 
 ### ---[ Prompt ]---------------------------------------------------------------
