@@ -6,3 +6,7 @@ bash_configure_fzf() {
 bash_configure_eval_fzf() {
 	fzf --bash
 }
+
+bash_configure_git_graph() {
+	alias gloga='git-graph --color always --model simple --style round | less'
+}
