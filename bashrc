@@ -39,13 +39,14 @@ PS1+='\[\033[1;36m\]\W'
 PS1+='$(branch=$(__git_branch); [ -n "$branch" ] && echo " \[\033[0;37m\]git:(\[\033[0;91m\]$branch\[\033[0;37m\])\[\033[0m\]")'
 PS1+='\[\033[0m\] \$ '
 
-### ---[ fzf ]------------------------------------------------------------------
-
-# Key-bindings instalados pelo mise (arquivo estático, sem eval)
-FZF_KEYBINDINGS="$HOME/.local/share/mise/installs/fzf/latest/shell/key-bindings.bash"
-[[ -f "$FZF_KEYBINDINGS" ]] && source "$FZF_KEYBINDINGS"
-
 ### ---[ Sources ]--------------------------------------------------------------
 
 source "$BASH_DIR/alias.sh"
-[[ -f "$BASH_DIR/local.sh" ]] && source "$BASH_DIR/local.sh"
+
+gen_configs() {
+	"$0" "$BASH_DIR/gen_configs.sh"
+	exec $0
+}
+
+[[ -f "$HOME/.environment.sh" ]] && source "$HOME/.environment.sh"
+[[ -f "$BASH_DIR/generated_configs.sh" ]] && source "$BASH_DIR/generated_configs.sh"
